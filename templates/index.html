@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img {
+        width:100% ;
+        height: 700px ;
+        object-fit:cover ;
+        /* object-fit: ;  مساحة*/
+    } 
+
+    .text{
+        position: absolute ;
+        /* absolut  بتسمح بالكلام علي الصورة*/
+        left:50%;
+        top:60% ;
+        transform: translate(-50%,-50%);
+        /*bet5ly elklam fi el nos belzabt*/
+        text-align: center;
+        color:aliceblue;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        /*shakl el l5at*/
+    }
+    button{
+        background-color: #1c2b39;
+        border-radius: 25px;
+        color: aliceblue;
+        font-size:larger;
+        padding: 12px 25px;
+        /*be yseb mes7a da5el el botton*/
+        cursor: pointer;
+        /*bet5ly elmouse shakl yad lma y2f 3aleha */
+
+    }
+
+</style>
+<body>
+    <img src="{{url_for('static',
+    filename='images/hotel2.jpeg')}}">
+    <div class="text">
+    <h1><strong>MARASI</strong></h1>
+    <h2>Yoour Luxury Escape</h2>
+    <h2>Discover the perfect place to relax and <br>enjoy your stay </h2>
+
+    
+    <a href="/hotels"><button>Explore now</button></a>
+    </div>
+</body>
+</html>

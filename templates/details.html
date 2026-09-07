@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .code{
+        background-color:#f5f7f8;
+        font-size: large;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #34495e ;
+    }
+    h1{
+        color: #1c2b39;
+    }
+    h2{
+        color: #c88b6b;
+    }
+    img{
+        width: 100%;
+        height: 450px;
+        object-fit:cover;
+        display: block;
+
+    }
+    button{
+        background-color:#273157e1 ;
+        color: aliceblue;
+        border-bottom: #34495e;
+        cursor:pointer;
+        padding: 15px;
+        border-radius: 10%;
+        width: 100%;
+        height: 60px;
+        font-size: 20px;
+
+    }
+</style>
+<body>
+  
+ 
+<div class="code" id="place1">
+   <img src="{{url_for('static',
+filename='images/html8.jpeg')}}">
+    <h1 id="title">Sunset Beach Chalet></h1>
+    <p id="description">Private chalet with a beautiful beach view</p>
+    <p id="price"><strong>  From $80 / night </strong></p>
+    
+    <p>⭐ Rating: 4.8 / 5<br>
+     📍 Location: Red Sea<br>
+    🛏️ Rooms: 2 Bedrooms</p>
+    <h2>Features</h2>
+    <p>✓ Free Wi-Fi<br>
+      ✓ Private Pool<br>
+      ✓ Air Conditioning<br>
+      ✓ Beach View</p>
+     <a href="/booking?place=1"><button>Book Now</button></a> 
+    </div>
+
+<div class="code" id="place2">
+<img src="{{url_for('static',
+filename='images/html7.jpeg')}}">
+    <h1 id="title">Blue Lagoon Resort</h1>
+    <p id="description">Relaxing stay surrounded by nature</p>
+    <p id="price"><strong> From $95 / night</strong></p>
+    <p>⭐ Rating: 4.8 / 5<br>
+     📍 Location: Red Sea<br>
+    🛏️ Rooms: 2 Bedrooms</p>
+    <h2>Features</h2>
+    <p>✓ Free Wi-Fi<br>
+      ✓ Private Pool<br>
+      ✓ Air Conditioning<br>
+      ✓ Beach View</p>
+     <a href="/booking?place=2"><button>Book Now</button></a> 
+</div>
+    <div class="code" id="place3">
+    <img src="{{ url_for ('static',
+    filename='images/html4.jpeg')}}" >
+    <h1 id="title">Marina Palace Hotel</h1>
+    <p id="description">Luxury hotel with a stunning sea view</p>
+    <p id="price"><strong> From $120 / night</strong></p>
+    <p>⭐ Rating: 4.8 / 5<br>
+     📍 Location: Red Sea<br>
+    🛏️ Rooms: 2 Bedrooms</p>
+    <h2>Features</h2>
+    <p>✓ Free Wi-Fi<br>
+      ✓ Private Pool<br>
+      ✓ Air Conditioning<br>
+      ✓ Beach View</p>
+     <a href="/booking?place=3"><button>Book Now</button></a> 
+</div>
+     <script>
+
+let place = new URLSearchParams(location.search).get("place");
+
+if (place == "1") {
+    document.getElementById("place1").style.display = "block";
+    document.getElementById("place2").style.display = "none";
+    document.getElementById("place3").style.display = "none";
+}
+
+else if (place == "2") {
+    document.getElementById("place1").style.display = "none";
+    document.getElementById("place2").style.display = "block";
+    document.getElementById("place3").style.display = "none";
+}
+
+else if (place == "3") {
+    document.getElementById("place1").style.display = "none";
+    document.getElementById("place2").style.display = "none";
+    document.getElementById("place3").style.display = "block";
+}
+
+</script>
+
+</body>
+</html>

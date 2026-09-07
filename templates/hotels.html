@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {background-color:#f5f7f8;}
+    .style{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: #1c2b39;
+        text-align: center;
+      }
+      img{
+        width:320px ;
+        height:300px ;
+        object-fit: cover;
+      }
+      .card{border:2px solid #1c2b39;}
+      button{
+        background-color: #1c2b39;
+        color: #f5f7f8;
+        border-radius: 20px;
+        padding: 15px;
+        cursor: pointer;
+        font-size: 15px;
+      }
+      .cards{
+        display: flex;
+        gap: 10px;
+
+      }
+
+
+
+</style>
+<body>
+    <h1>Hotels & Chalets </h1>
+    <p>Discover beautiful places designed for your perfect escape.</p>
+    <div class="cards">
+    <div class="style card">
+       <img src="{{ url_for('static',
+       filename='images/html8.jpeg') }}">
+
+       <p>Sunset Beach Chalet<br>
+Private chalet with a beautiful beach view<br>
+From $80 / night,</p>
+      <a href="/details?place=1"> <button>View Details</button></a>
+    </div>
+    <div class="style card">
+      <img src="{{ url_for('static',
+       filename='images/html7.jpeg') }}">
+        <p>Blue Lagoon Resort<br>
+Relaxing stay surrounded by nature<br>
+From $95 / night</p>
+<a href="/details?place=2"><button>View Details</button></a>
+    </div>
+<div class="style card">
+     <img src="{{ url_for('static',
+       filename='images/html4.jpeg') }}">
+   <p> Marina Palace Hotel<br>
+Luxury hotel with a stunning sea view<br>
+From $120 / night</p>
+<a href="/details?place=3"><button>View Details</button></a>
+</div>
+
+
+    </div>
+</body>
+</html> 

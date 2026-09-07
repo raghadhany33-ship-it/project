@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+        body {
+            background-color: #f5f7f8;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #1d3751;
+        }
+
+        .booking {
+            width: 600px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #1c2b39;
+        }
+
+        p {
+            color: #34495e;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-top: 15px;
+            color: #1c2b39;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-family: Georgia;
+        }
+
+        button {
+            margin-top: 25px;
+            background-color: #1c2b39;
+            color: white;
+            border-radius: 20px;
+            padding: 12px 30px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #34495e;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="booking">
+
+        <h1>Book Your Stay</h1>
+
+        <p>Complete the form below to reserve your perfect stay.</p>
+
+        <form method="POST">
+
+            <label>Full Name</label>
+            <input type="text" name="name" placeholder="Enter your name" required>
+
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Enter your email" required>
+
+            <label>Phone Number</label>
+            <input type="tel" name="phone" placeholder="Enter your phone number" required>
+
+            <label>Check-in Date</label>
+            <input type="date" name="checkin" required>
+
+            <label>Check-out Date</label>
+            <input type="date" name="checkout" required>
+
+            <label>Number of Guests</label>
+            <select name="guests">
+                <option>1 Guest</option>
+                <option>2 Guests</option>
+                <option>3 Guests</option>
+                <option>4 Guests</option>
+                <option>5+ Guests</option>
+            </select>
+
+            <button type="submit">Confirm Booking</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
